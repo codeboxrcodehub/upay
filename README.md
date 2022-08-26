@@ -27,7 +27,7 @@ php artisan vendor:publish --provider="Codeboxr\Upay\UpayServiceProvider"
 
 After publish config file setup your credential. you can see this in your config directory upay.php file
 ```
-"sandbox"                => env("UPAY_SANDBOX", false), // for production use true
+"sandbox"                => env("UPAY_SANDBOX", false), // for sandbox use true
 "merchant_id"            => env("UPAY_MERCHANT_ID", ""),
 "merchant_key"           => env("UPAY_MERCHANT_KEY", ""),
 "merchant_code"          => env("UPAY_MERCHANT_CODE", ""),

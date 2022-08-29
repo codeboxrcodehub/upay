@@ -13,7 +13,7 @@ class BaseApi
 
     public function __construct()
     {
-        $this->baseUrl = config('upay.sandbox') == true ? "https://uat-pg.upay.systems/" : "";
+        $this->baseUrl = config('upay.sandbox') == true ? "https://uat-pg.upay.systems/" : "https://pg.upaysystem.com/";
     }
 
     protected function headers()

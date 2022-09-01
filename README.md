@@ -9,6 +9,7 @@
 </p>
 
 ## Features
+
 1. [Create Payment/Take to Payment Page](https://github.com/codeboxrcodehub/upay#1-create-payment)
 2. [Query Payment/Payment Details](https://github.com/codeboxrcodehub/upay#2-query-payment)
 
@@ -48,7 +49,7 @@ After publish config file setup your credential. you can see this in your config
 
 ```
 UPAY_SANDBOX=true // for production use false
-UPAY_SERVER_IP="" // uPay only support IPV4
+UPAY_SERVER_IP="" // uPay only support IPV4 for production server don't needed sandbox
 UPAY_MERCHANT_ID=""
 UPAY_MERCHANT_KEY=""
 UPAY_MERCHANT_CODE=""
@@ -84,17 +85,17 @@ use Codeboxr\Upay\Facade\Payment;
 Payment::queryPayment($invoiceId); // Invoice ID 
 ```
 
-<span style="color: #70b7cd">Note: uPay only support IPV4</span>
+<span style="color: #70b7cd">Note: uPay only support IPV4 for production server</span>
 
 ## Contributing
 
 Contributions to the uPay package are welcome. Please note the following guidelines before submitting your pull request.
 
 - Follow [PSR-4](http://www.php-fig.org/psr/psr-4/) coding standards.
-- Read uPay API documentations first
+- Read uPay API documentations first.Please contact with uPay for their api documentation and sandbox access.
 
 ## License
 
 uPay package is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
-Copyright 2022 [Codeboxr](https://codeboxr.com)
+Copyright 2022 [Codeboxr](https://codeboxr.com) We are not not affiliated with uPay and don't give any guarantee.

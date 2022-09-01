@@ -2,8 +2,12 @@
 
 namespace Codeboxr\Upay\Managers;
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\RedirectResponse;
 use Codeboxr\Upay\Exception\UpayException;
+use Illuminate\Contracts\Foundation\Application;
 
 class Payment extends BaseApi
 {
@@ -15,12 +19,12 @@ class Payment extends BaseApi
      * @param string $txnId
      * @param string $date
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      * @throws UpayException
      */
     public function createPayment($amount, $invoiceId, $txnId, $date)
     {
-        $upayResponse = Http::withHeaders($this->headers())
+        $upayResponse = $this->request()
             ->post($this->baseUrl . "payment/merchant-payment-init/", [
                 "date"                      => $date,
                 "txn_id"                    => $txnId,
@@ -61,7 +65,7 @@ class Payment extends BaseApi
      * @param string $txnId
      * @param string $date
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|void
+     * @return Application|RedirectResponse|Redirector|void
      * @throws UpayException
      */
     public function executePayment($amount, $invoiceId, $txnId, $date)
@@ -75,13 +79,12 @@ class Payment extends BaseApi
      *
      * @param string $txnId
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      * @throws UpayException
      */
     public function queryPayment(string $txnId)
     {
-        $upayResponse = Http::withHeaders($this->headers())
-            ->get($this->baseUrl . "payment/single-payment-status/{$txnId}/");
+        $upayResponse = $this->request()->get($this->baseUrl . "payment/single-payment-status/{$txnId}/");
 
         $result = json_decode($upayResponse->body());
         if ($upayResponse->failed()) {
@@ -106,12 +109,12 @@ class Payment extends BaseApi
      *
      * @param array $txnIds
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      * @throws UpayException
      */
     public function getMultiStatus(array $txnIds)
     {
-        $upayResponse = Http::withHeaders($this->headers())
+        $upayResponse = $this->request()
             ->post($this->baseUrl . "payment/bulk-payment-status/", [
                 "txn_id_list" => $txnIds
             ]);

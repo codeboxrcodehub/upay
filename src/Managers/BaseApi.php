@@ -46,10 +46,11 @@ class BaseApi
     protected function getToken()
     {
         if (empty($this->token)) {
-            $response = $this->request()->post($this->baseUrl . "payment/merchant-auth/", [
-                "merchant_id"  => config("upay.merchant_id"),
-                "merchant_key" => config("upay.merchant_key"),
-            ]);
+            $response = $this->request()
+                ->post($this->baseUrl . "payment/merchant-auth/", [
+                    "merchant_id"  => config("upay.merchant_id"),
+                    "merchant_key" => config("upay.merchant_key"),
+                ]);
 
             $result = json_decode($response->body());
             if ($response->failed()) {
@@ -69,9 +70,12 @@ class BaseApi
      */
     protected function request()
     {
-        return Http::acceptJson()
-            ->withOptions([
+        $request = Http::acceptJson();
+        if (config('upay.sandbox') != true) {
+            $request->withOptions([
                 'curl' => [CURLOPT_INTERFACE => config("upay.server_ip"), CURLOPT_IPRESOLVE => 1],
             ]);
+        }
+        return $request;
     }
 }

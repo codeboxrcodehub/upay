@@ -25,6 +25,7 @@ class Payment extends BaseApi
     public function createPayment($amount, $invoiceId, $txnId, $date)
     {
         $upayResponse = $this->request()
+            ->withHeaders($this->headers())
             ->post($this->baseUrl . "payment/merchant-payment-init/", [
                 "date"                      => $date,
                 "txn_id"                    => $txnId,
@@ -84,7 +85,9 @@ class Payment extends BaseApi
      */
     public function queryPayment(string $txnId)
     {
-        $upayResponse = $this->request()->get($this->baseUrl . "payment/single-payment-status/{$txnId}/");
+        $upayResponse = $this->request()
+            ->withHeaders($this->headers())
+            ->get($this->baseUrl . "payment/single-payment-status/{$txnId}/");
 
         $result = json_decode($upayResponse->body());
         if ($upayResponse->failed()) {
@@ -115,6 +118,7 @@ class Payment extends BaseApi
     public function getMultiStatus(array $txnIds)
     {
         $upayResponse = $this->request()
+            ->withHeaders($this->headers())
             ->post($this->baseUrl . "payment/bulk-payment-status/", [
                 "txn_id_list" => $txnIds
             ]);

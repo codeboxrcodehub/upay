@@ -8,6 +8,8 @@
 <img src="https://img.shields.io/packagist/stars/codeboxr/upay">
 </p>
 
+This is a Laravel/PHP package for uPay BD Payment Gateway. This package can be used in laravel or without laravel/php projects. You can use this package for headless/rest implementation as well as blade or regular mode development. We created this package while working for a project and thought to made it release for all so that it helps. 
+
 ## Features
 
 1. [Create Payment/Take to Payment Page](https://github.com/codeboxrcodehub/upay#1-create-payment)

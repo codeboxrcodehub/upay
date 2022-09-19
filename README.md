@@ -80,7 +80,7 @@ return Payment::executePayment($amount, $invoiceId, $txnId, $date);
 return Payment::executePayment(10, 'CBX10101', '10127373', '2022-08-26');
 ```
 
-### 2. Create Payment for RestAPI
+### 2. Create Payment for REST API
 
 ```
 use Codeboxr\Upay\Facade\Payment;

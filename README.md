@@ -13,7 +13,8 @@ This is a Laravel/PHP package for uPay BD Payment Gateway. This package can be u
 ## Features
 
 1. [Create Payment/Take to Payment Page](https://github.com/codeboxrcodehub/upay#1-create-payment)
-2. [Query Payment/Payment Details](https://github.com/codeboxrcodehub/upay#2-query-payment)
+2. [Create Payment for Headless/RestAPI](https://github.com/codeboxrcodehub/upay#2-create-payment-for-restapi)
+3. [Query Payment/Payment Details](https://github.com/codeboxrcodehub/upay#2-query-payment)
 
 ## Requirements
 

@@ -107,10 +107,10 @@ Payment::queryPayment($invoiceId); // Invoice ID
 
 ## Contributing
 
-Contributions to the uPay package are welcome. Please note the following guidelines before submitting your pull request.
+Contributions to the Upay package are welcome. Please note the following guidelines before submitting your pull request.
 
 - Follow [PSR-4](http://www.php-fig.org/psr/psr-4/) coding standards.
-- Read Upay API documentations first.Please contact with uPay for their api documentation and sandbox access.
+- Read Upay API documentations first.Please contact with Upay for their api documentation and sandbox access.
 
 ## License
 

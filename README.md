@@ -2,7 +2,7 @@
   <img src="https://www.upaybd.com/images/Upay-Logo.jpg">
 </p>
 
- <h1 align="center">uPay BD Payment Gateway</h1>
+ <h1 align="center">Upay BD Payment Gateway</h1>
 <p align="center" >
 <img src="https://img.shields.io/packagist/dt/codeboxr/upay">
 <img src="https://img.shields.io/packagist/stars/codeboxr/upay">

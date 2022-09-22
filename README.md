@@ -103,7 +103,7 @@ use Codeboxr\Upay\Facade\Payment;
 Payment::queryPayment($invoiceId); // Invoice ID 
 ```
 
-<span style="color: #70b7cd">Note: uPay only support IPV4 for production server</span>
+<span style="color: #70b7cd">Note: Upay only support IPV4 for production server</span>
 
 ## Contributing
 

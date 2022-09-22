@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/packagist/stars/codeboxr/upay">
 </p>
 
-This is a Laravel/PHP package for uPay BD Payment Gateway. This package can be used in laravel or without laravel/php projects. You can use this package for headless/rest implementation as well as blade or regular mode development. We created this package while working for a project and thought to made it release for all so that it helps. 
+This is a Laravel/PHP package for [uPay](https://www.upaybd.com/) BD Payment Gateway. This package can be used in laravel or without laravel/php projects. You can use this package for headless/rest implementation as well as blade or regular mode development. We created this package while working for a project and thought to made it release for all so that it helps. 
 
 ## Features
 

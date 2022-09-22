@@ -1,6 +1,6 @@
 {
     "name": "codeboxr/upay",
-    "description": "uPay Payment Gateway Package",
+    "description": "Upay Payment Gateway Package",
     "type": "library",
     "license": "MIT",
     "autoload": {

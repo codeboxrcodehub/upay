@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/packagist/stars/codeboxr/upay">
 </p>
 
-This is a Laravel/PHP package for [uPay](https://www.upaybd.com/) BD Payment Gateway. This package can be used in laravel or without laravel/php projects. You can use this package for headless/rest implementation as well as blade or regular mode development. We created this package while working for a project and thought to made it release for all so that it helps. 
+This is a Laravel/PHP package for [Upay](https://www.upaybd.com/) BD Payment Gateway. This package can be used in laravel or without laravel/php projects. You can use this package for headless/rest implementation as well as blade or regular mode development. We created this package while working for a project and thought to made it release for all so that it helps. 
 
 ## Features
 
@@ -110,10 +110,10 @@ Payment::queryPayment($invoiceId); // Invoice ID
 Contributions to the uPay package are welcome. Please note the following guidelines before submitting your pull request.
 
 - Follow [PSR-4](http://www.php-fig.org/psr/psr-4/) coding standards.
-- Read uPay API documentations first.Please contact with uPay for their api documentation and sandbox access.
+- Read Upay API documentations first.Please contact with uPay for their api documentation and sandbox access.
 
 ## License
 
-uPay package is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+Upay package is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
-Copyright 2022 [Codeboxr](https://codeboxr.com) We are not not affiliated with uPay and don't give any guarantee.
+Copyright 2022 [Codeboxr](https://codeboxr.com) We are not not affiliated with Upay and don't give any guarantee.

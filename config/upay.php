@@ -2,7 +2,7 @@
 
 return [
     "sandbox"                => env("UPAY_SANDBOX", false),
-    "server_ip"              => env("UPAY_SERVER_IP", ""),
+    "server_ip"              => env("UPAY_SERVER_IP", ""), //must needed for production/live use, for sandbox it's not needed.
     "merchant_id"            => env("UPAY_MERCHANT_ID", ""),
     "merchant_key"           => env("UPAY_MERCHANT_KEY", ""),
     "merchant_code"          => env("UPAY_MERCHANT_CODE", ""),
